@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: ease-in-out 0.3s;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #18d26e;
+}
+
+a:hover {
+  color: #35e888;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+ 
+@layer base {
+  .container {
+    @apply mx-auto;
+    @apply px-4 md:px-4;
+    max-width: 1440px;
+
+    @screen sm {
+      max-width: 720px;
+    }
+  }
+}
