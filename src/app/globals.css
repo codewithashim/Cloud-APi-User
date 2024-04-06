@@ -33,6 +33,7 @@ h6 {
 }
 
  
+ 
 @layer base {
   .container {
     @apply mx-auto;
@@ -44,3 +45,4 @@ h6 {
     }
   }
 }
+ 

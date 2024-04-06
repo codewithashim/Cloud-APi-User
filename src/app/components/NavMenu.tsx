@@ -18,7 +18,6 @@ const Navbar = () => {
       <div className="mx-auto my-4 container  flex items-center justify-between">
         <ul className="items-stretch hidden space-x-4 gap-3 lg:flex">
           <NavItem href="/" label="Home" />
-          <NavItem href="/user" label="User" />
           {session?.user ? (
             <>
               <button
@@ -27,6 +26,7 @@ const Navbar = () => {
               >
                 Logout
               </button>
+              <NavItem href="/add_customer" label="Add Customer" />
             </>
           ) : (
             <div
@@ -77,7 +77,6 @@ const Navbar = () => {
           <div className="absolute lg:hidden px-8 pb-8 bg-gray-700 w-full left-0 top-20">
             <ul className="  gap-3 flex flex-col py-4">
               <NavItem href="/" label="Home" />
-              <NavItem href="/users" label="User" />
               {session?.user ? (
                 <>
                   <button
@@ -86,6 +85,7 @@ const Navbar = () => {
                   >
                     Logout
                   </button>
+                  <NavItem href="/add_customer" label="Add Customer" />
                 </>
               ) : (
                 <div

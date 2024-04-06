@@ -1,17 +1,16 @@
+"use client";
 import { redirect } from "next/navigation";
-import { getServerSession } from "next-auth";
+import { useSession } from "next-auth/react";
 
-export default async function ProtectedRoute() {
-  const session = await getServerSession();
+export default  function ProtectedRoute({ children }: any) {
+  const { data: session } = useSession();
+
   if (!session || !session.user) {
     redirect("/api/auth/signin");
   }
 
-  return (
-    <div>
-      This is a protected route.
-      <br />
-      You will only see this if you are authenticated.
-    </div>
-  );
+  return <div>{children}</div>;
 }
+ 
+
+ 
