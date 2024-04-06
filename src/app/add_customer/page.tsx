@@ -22,9 +22,6 @@ const AddCustomer = () => {
         `${process.env.NEXT_PUBLIC_BASED_URL}/customer`,
         customerData
       );
-
-      console.log(response, "response");
-      // Show success message with SweetAlert
       Swal.fire({
         icon: "success",
         title: "Success!",
